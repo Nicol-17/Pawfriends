@@ -1,31 +1,34 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.Nav-container {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 110px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #fffff003;
+  backdrop-filter: blur(7px); */
 }
 
-.Nav-container {
-  position: relative;
-  width: 100%;
-  height: 200px; 
+.Nav-menu {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  padding: 20px 40px;
+  align-items: center;
 }
 
 
 .Nav-logo {
   width: 25%;
-  height: 70%;
+  /* height: 70%; */
   object-fit: contain;
-  left: 10px ;
-  top: 0;
   display: flex;
-  position: absolute;
+  /* left: 10px ;
+  top: 0; */
+  /* position: absolute;
   right: 0;
   height: auto;
-  z-index: 0;
+  z-index: 0; */
 
 }
 
@@ -41,11 +44,12 @@
 
 
 .Nav-list {
-  position: absolute;
+  /* position: absolute;
   top: 60px; 
-  left: 60%;
-  transform: translateX(-50%);
+  right: 0;
+  transform: translateX(-50%); */
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 100px;
   z-index: 1;

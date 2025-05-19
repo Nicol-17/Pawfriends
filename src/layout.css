@@ -1,0 +1,8 @@
+.main-wrapper {
+  width: min(calc(100% - 1rem), max(1024px));
+  margin-inline: auto;
+}
+
+.section-full {
+  min-height: 100dvh;
+}

@@ -7,9 +7,11 @@ const Home = () => {
         <>
             <NavItem/>
             <HeroText/>
-            
+            <section className='section-full'>asdasds</section>
+            <section className='section-full'>asdasds</section>
+            <section className='section-full'>asdasds</section>
+            <section className='section-full'>asdasds</section>
         </>
-        
     )
 
 }
