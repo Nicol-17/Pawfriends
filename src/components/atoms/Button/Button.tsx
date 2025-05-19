@@ -1,11 +1,15 @@
-import React from "react";
+import { type ReactNode, type MouseEvent } from "react";
+
+import { Link } from 'react-router-dom';
+
 import "./Button.css";
 
 type ButtonProps = {
-  children: React.ReactNode;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  type?: "button" | "submit" | "reset";
+  children: ReactNode;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  type?: "button" | "submit" | "reset" | 'link';
   className?: string;
+  destiny?: string;
 };
 
 const Button = ({
@@ -13,16 +17,27 @@ const Button = ({
   onClick,
   type = "button",
   className = "",
+  destiny
 }: ButtonProps) => {
-  return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={`custom-button ${className}`}
-    >
-      {children}
-    </button>
-  );
+
+  if (type === 'link') {
+    return <Link
+      to={`${destiny}`}
+      className={`custom-button ${className}`}>
+        {children}
+      </Link>
+  } else {
+    return (
+      <button
+        type={type}
+        onClick={onClick}
+        className={`custom-button ${className}`}
+      >
+        {children}
+      </button>
+    );
+
+  }
 };
 
 export default Button;
