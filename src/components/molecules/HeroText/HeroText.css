@@ -1,0 +1,43 @@
+.text-primary {
+  color: var(--theme-color-primary); 
+  padding: 2rem 2rem;
+  text-align: right;
+  margin-right: 250px;
+}
+
+.text-principle h1 {
+  font-size: 2.5rem;
+  font-family: var(--theme-font-chewy);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.text-primary p:first-of-type {
+  font-size: 1rem;
+  font-family: var( --theme-font-quicksand);
+  font-weight: 700;
+  margin-top: -30px;
+  margin-bottom: 20px;
+  color: var(--theme-color-primary);
+  transform: translateX(130px); 
+}
+
+.paragraph-primary{
+    color: var(--theme-color-primary);
+    font-family: var(--theme-font-quicksand);
+    
+}
+
+.Nav-links button {
+  background-color: #1f2d3d;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: var( --theme-font-quicksand);
+  
+}
