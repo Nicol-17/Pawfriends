@@ -1,10 +1,7 @@
 .text-primary {
   color: var(--theme-color-primary); 
-  /* padding: 2rem 2rem; */
-  /* text-align: right; */
-  /* margin-right: 250px; */
   width: fit-content;
-  margin-block-start: 200px;
+  margin-block-start: 100px;
   margin-inline-start: auto;
 }
 
@@ -24,12 +21,21 @@
   }
 }
 
+.Rama-secondary{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 140px;
+}
+
 .Shape {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
+  color: var(--theme-color-contrast);
 
   svg {
     position: absolute;
@@ -38,21 +44,10 @@
   }
 }
 
-.Nav-links button {
-  background-color: #1f2d3d;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 20px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  font-family: var( --theme-font-quicksand);
-  
-}
 
 .hero-section {
   position: relative;
-  padding-block-start: 120px; /*padding-top*/
+  padding-block-start: 120px; 
   position: relative;
 }
 
@@ -62,4 +57,14 @@
   left: -100px;
   height: 500px;
 
+}
+
+.paragraph-primary{
+  padding: 15px;
+  margin-inline-start: 19ch;
+}
+
+.paragraph-secondary{
+  padding: 5px;
+  margin-inline-start: 30ch;
 }

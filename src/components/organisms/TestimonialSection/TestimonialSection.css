@@ -1,0 +1,9 @@
+.Testimonial-container{
+    padding-top: 200px;
+}
+.Testimonial-container h2{
+    text-align: center;
+    padding-top: 20px;
+    font-family: var(--theme-font-chewy);
+
+}

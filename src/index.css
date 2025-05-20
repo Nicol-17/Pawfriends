@@ -37,6 +37,10 @@
   font-family: var(--theme-font-quicksand);
 }
 
+html {
+
+  scroll-behavior: smooth;
+}
 
 
 body {

@@ -1,0 +1,20 @@
+.mission-container{
+    margin-left: 100px;
+    
+}
+
+.mission-img{
+    width: 450px;
+    position: absolute;
+    
+}
+.mission-text-container{
+    text-align: center;
+    font-family: var( --theme-font-quicksand);
+    margin-left: 350px;
+}
+
+.mission-title{
+    padding: 20px;
+    font-family: var(--theme-font-chewy);
+}

@@ -1,16 +1,31 @@
 import "./home.css"
 import NavItem from "../../components/organisms/NavItem/NavItem";
 import HeroText from "../../components/molecules/HeroText/HeroText";
+import UsText from "../../components/molecules/UsText/UsText";
+import Hojas from "../../assets/Hojas.png"
+import TestimonialSection from "../../components/organisms/TestimonialSection/TestimonialSection";
+import Image from "../../components/atoms/Image/Image";
 
 const Home = () => {
-    return(
+    return (
         <>
-            <NavItem/>
-            <HeroText/>
-            <section className='section-full'>asdasds</section>
-            <section className='section-full'>asdasds</section>
-            <section className='section-full'>asdasds</section>
-            <section className='section-full'>asdasds</section>
+            <NavItem />
+
+
+            <main className="section">
+                <HeroText />
+            </main>
+            <div className="separator">
+                <Image src={Hojas} alt="Hojas"  className="Hojas" aria-hidden="true" ></Image>
+            </div>
+
+            <section id="us" className="section">
+                <UsText />
+            </section>
+
+            <section id="testimonials" className="testimonials">
+                <TestimonialSection />
+            </section>
         </>
     )
 
