@@ -1,0 +1,22 @@
+.Contact-container{
+    padding-top: 170px;
+    padding-left: 200px;
+}
+.Contact-container h2{
+    text-align: end;
+    padding-right: 300px;
+    font-family: var(--theme-font-chewy);
+    font-size: 2.5rem;
+}
+
+.Contact-container  hr{
+    width: 500px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 100px;
+    
+}
+
+.contact-img{
+    width: 300px;
+}

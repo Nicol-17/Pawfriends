@@ -1,5 +1,4 @@
 import "./NavItem.css"
-import { Link } from 'react-router-dom';
 import Button from "../../atoms/Button/Button";
 import Logo from "../../../assets/logo.png";
 
@@ -12,7 +11,7 @@ function NavItem () {
                 <ul className="Nav-list">
                     <li><a href="#us" className="Nav-links">US</a></li>
                     <li><a href="#testimonials" className="Nav-links">TESTIMONIALS</a></li>
-                    <li><Link to="/contact" className="Nav-links">CONTACT US</Link></li>
+                    <li><a href="#contact" className="Nav-links">CONTACT US</a></li>
                     <li>
                         <Button type='link' destiny="/login" className="Nav-links">
                             Log In
