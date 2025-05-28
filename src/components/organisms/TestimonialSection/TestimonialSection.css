@@ -7,3 +7,17 @@
     font-family: var(--theme-font-chewy);
 
 }
+
+@media (max-width: 768px) {
+    .Testimonial-container{
+       padding: 2rem;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+
+       
+    }
+    .Testimonial-container h2{
+        font-size: 2rem;
+    }
+}

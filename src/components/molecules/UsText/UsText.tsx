@@ -7,7 +7,7 @@ function  UsText() {
       <section className="mission-container">
         <Image src={Us} alt="Us" className="mission-img" ></Image>
     
-        <div className="mission-text-container">
+        <div className="mission-text-container" >
             <h2 className="mission-title">ABOUT US</h2>
             <p>
                 At PawFriends, we believe that every dog<br/>

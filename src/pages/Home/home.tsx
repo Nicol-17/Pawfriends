@@ -28,6 +28,10 @@ const Home = () => {
                 <TestimonialSection />
             </section>
 
+            <div className="separator">
+                <Image src={Hojas} alt="Hojas"  className="Hojas" aria-hidden="true" ></Image>
+            </div>
+
             <section id="contact" className="contact">
                 <ContactSection/>
 

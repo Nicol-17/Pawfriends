@@ -10,6 +10,7 @@ import Image from "../../atoms/Image/Image";
 function HeroText (){
     return (
     <section className='hero-section section-full'>
+        
         <Image src={RamaSecondary} alt="Rama" aria-hidden="true" className="Rama-secondary"></Image>
         <Image src={Rama} alt="Rama" aria-hidden="true" className="Nav-rama" ></Image>
         <Image src={Dog} alt="Dog" aria-hidden="true" className="Dog"></Image>
@@ -37,7 +38,7 @@ function HeroText (){
                     AND NEITHER DO YOU
                 </p>
     
-                <Button type='link' destiny="/login" className="Nav-links">
+                <Button type='link' destiny="/signup" className="Nav-links">
                     SIGN UP
                 </Button>
             </div>

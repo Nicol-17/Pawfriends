@@ -1,28 +1,30 @@
 import { useState } from "react";
 import { validateRequiredFields } from "../../Utils/validation"; 
 import Button from "../../atoms/Button/Button";
+import "./BaseForm.css";
 
-
-
-type Field = {
+export type Field = {
   name: string;
   label: string;
-  type: "text" | "email" | "password" | "textarea";
+  type: "text" | "email" | "password" | "textarea" | "select" | "tel" | "date";
   placeholder?: string;
+  className?: string;
+  options?: { value: string; label: string }[]; 
 };
 
 type BaseFormProps = {
   fields: Field[];
   onSubmit: (values: Record<string, string>) => void;
   buttonText: string;
+  className?: string;
 };
 
-  const BaseForm = ({ fields, onSubmit, buttonText }: BaseFormProps) => {
+const BaseForm = ({ fields, onSubmit, buttonText, className }: BaseFormProps) => {
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -43,7 +45,7 @@ type BaseFormProps = {
   };
 
   return (
-    <form className="base-form" onSubmit={handleSubmit}>
+    <form className={`base-form ${className || ""}`} onSubmit={handleSubmit}>
       {fields.map((field) => (
         <div key={field.name} className="form-group">
           <label htmlFor={field.name}>{field.label}</label>
@@ -55,8 +57,23 @@ type BaseFormProps = {
               placeholder={field.placeholder}
               value={formData[field.name] || ""}
               onChange={handleChange}
-              className={errors[field.name] ? "error" : ""}
+              className={`form-input ${errors[field.name] ? "error" : ""}`}
             />
+          ) : field.type === "select" ? (
+            <select
+              id={field.name}
+              name={field.name}
+              value={formData[field.name] || ""}
+              onChange={handleChange}
+              className={`form-input ${errors[field.name] ? "error" : ""}`}
+            >
+              <option value="">Select an option</option>
+              {field.options?.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
           ) : (
             <input
               id={field.name}
@@ -65,7 +82,7 @@ type BaseFormProps = {
               placeholder={field.placeholder}
               value={formData[field.name] || ""}
               onChange={handleChange}
-              className={errors[field.name] ? "error" : ""}
+              className={`form-input ${errors[field.name] ? "error" : ""}`}
             />
           )}
 
@@ -75,11 +92,9 @@ type BaseFormProps = {
         </div>
       ))}
 
-      <Button type="submit"  className="submit-button">
+      <Button type="submit" className="submit-button">
         {buttonText}
       </Button>
-
-      
     </form>
   );
 };
