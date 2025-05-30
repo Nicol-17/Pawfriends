@@ -31,6 +31,7 @@
 .contact-text h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: var(--theme-font-chewy);
   
 }
 .contact-separador{

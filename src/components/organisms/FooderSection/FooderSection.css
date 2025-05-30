@@ -1,0 +1,24 @@
+.fooder-container{
+     display: grid;
+    row-gap: 2rem;
+   
+    h2 {
+        text-align: center;
+        font-family: var(--theme-font-chewy);
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+}
+
+.fooder-cards-container{
+    display: flex;
+    gap: 5rem;
+    justify-Content: space-evenly;
+    
+    
+}

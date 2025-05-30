@@ -6,25 +6,33 @@ import type { Field } from "../../components/organisms/BaseForm/BaseForm";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import NavItem from "../../components/organisms/NavItem/NavItem";
+import Button from "../../components/atoms/Button/Button";
+import Image from "../../components/atoms/Image/Image";
+import RamaSecondary from "../../assets/Rama-secondary.png";    
 import "./Login.css";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../../components/atoms/LanguageSwitcher/LanguageSwitcher";
+
 
 
 function login() {
+    const { t } = useTranslation(["login"]);
     const navigate = useNavigate();
     const [errorMessage, setErrorMessage] = useState("");
 
     const fields: Field[] = [
         {
             name: "email",
-            label: "Email",
+            label: t('fields.email.label'),
             type: "email",
-            placeholder: "Enter your Email"
+            placeholder: t('fields.email.placeholder')
         },
         {
             name: "password",
-            label: "Password",
+            label: t('fields.password.label'),
             type: "password",
-            placeholder: "Enter your Password"
+            placeholder: t('fields.password.placeholder')
         },
     ];
     const handleLoginSubmit = async (FormData: Record<string, string>) => {
@@ -40,30 +48,39 @@ function login() {
 
 
     return (
+        <>
+        <NavItem>
+            <LanguageSwitcher/>
+            <Button type="link" destiny="/" className="Nav-links">
+            Go to Home
+            </Button>
+        </NavItem>
+        
 
         <section className="Login-container">
-            <div className="background">
-                <div className="shape"></div>
-                <div className="shape"></div>
-            </div>
+            
 
             <div className="Form-container">
-                <h3>LOG IN</h3>
+                <h3>{t('title')}</h3>
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
 
                 <BaseForm fields={fields} onSubmit={
-                    handleLoginSubmit} buttonText="Login" className="style-login" />
+                    handleLoginSubmit} buttonText={t('button')} className="style-login" />
                 <div className="login-icons">
                     <a href="#"><FaGoogle /> Google</a>
                     <a href="#"><FaFacebook /> Facebook</a>
                 </div>
                 <div className="login-footer">
-                    <p>Don't have an account? <Link to="/signup" aria-label="Sign up for a new account">Sign Up</Link></p>
+                    <p>{t('forgotPassword')}<Link to="/signup" aria-label="Sign up for a new account">{t('signup')}</Link></p>
                 </div>
-                <Link to="/" className="Link" aria-label="Go back to home page">Back to Home</Link>
+                
 
             </div>
+            <Image src={RamaSecondary} alt="Rama" aria-hidden="true" className="Rama-secondary"></Image>
+            
         </section>
+        <div className="bg"></div>
+        </>
 
     )
 }

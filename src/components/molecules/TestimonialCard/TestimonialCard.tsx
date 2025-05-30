@@ -5,6 +5,7 @@ type TestimonialCardProps = {
     comment: string;
     avatar: string;
     rating?: number;
+    
 };
 
 function TestimonialCard ({name, comment, avatar, rating = 5} :TestimonialCardProps){

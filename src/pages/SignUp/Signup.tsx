@@ -1,58 +1,74 @@
-import { Link } from "react-router-dom";
 import BaseForm from "../../components/organisms/BaseForm/BaseForm";
 import type { Field } from "../../components/organisms/BaseForm/BaseForm";
 import "../Login/Login.css"
+import RamaSecondary from "../../assets/Rama-secondary.png";
+import Image from "../../components/atoms/Image/Image";
+import NavItem from "../../components/organisms/NavItem/NavItem";
+import Button from "../../components/atoms/Button/Button";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../../components/atoms/LanguageSwitcher/LanguageSwitcher";
 function SignUp() {
+  const { t } = useTranslation(["signup"])
+
   const fields: Field[] = [
     {
       name: "FullName",
-      label: "Name",
+      label: t('fields.name.label'),
       type: "text",
-      placeholder: "Enter your Name"
+      placeholder: t('fields.name.placeholder')
     },
     {
       name: "email",
-      label: "Email",
+      label: t('fields.email.label'),
       type: "email",
-      placeholder: "Enter your Email"
+      placeholder: t('fields.email.placeholder')
 
     },
     {
       name: "Phone",
-      label: "Phone",
+      label: t('fields.phone.label'),
       type: "tel",
-      placeholder: "Enter your Phone Number"
+      placeholder: t('fields.phone.placeholder')
     },
     {
       name: "birthdate",
-      label: "birthdate",
+      label: t('fields.birthdate.label'),
       type: "date",
-      placeholder: "Enter your birthdate"
+      placeholder: t('fields.birthdate.placeholder')
     },
 
     {
       name: "country",
-      label: "Country",
+      label: t('fields.country.label'),
       type: "select",
       options: [
-        { label: "Argentina", value: "AR" },
-        { label: "Canada", value: "CA" },
-        { label: "Colombia", value: "CO" },
+        { label: t('fields.country.options.AR'), value: "AR" },
+        { label: t('fields.country.options.FR'), value: "FR" },
+        { label: t('fields.country.options.CO'), value: "CO" },
+        { label: t('fields.country.options.DE'), value: "DE" },
 
       ],
     },
     {
       name: "password",
-      label: "Password",
+      label: t('fields.password.label'),
       type: "password",
-      placeholder: "Enter your Password"
+      placeholder: t('fields.password.placeholder')
     },
   ];
 
   const handleSignUpSubmit = (formData: Record<string, string>) => {
     console.log("Form submitted:", formData);
   }
-    return (
+  return (
+
+    <>
+      <NavItem>
+        <LanguageSwitcher />
+        <Button type="link" destiny="/login" className="Nav-links">
+          {t('buttonNav')}
+        </Button>
+      </NavItem>
       <section className="Login-container">
         <div className="background">
           <div className="shape"></div>
@@ -60,15 +76,19 @@ function SignUp() {
         </div>
 
         <div className="Form-container">
-          <h3>SIGN UP</h3>
-          <BaseForm fields={fields} onSubmit={handleSignUpSubmit} buttonText="Sign Up" className="style-login" />
-          <Link to="/login" className="link">RETURN</Link>
+          <h3>{t('title')}</h3>
+          <BaseForm fields={fields} onSubmit={handleSignUpSubmit} buttonText={t('buttonForm')} className="style-login" />
+
 
 
         </div>
+        <Image src={RamaSecondary} alt="Rama" aria-hidden="true" className="Rama-secondary"></Image>
       </section>
-    );
-  }
+      <div className="bg"></div>
+
+    </>
+  );
+}
 
 
 export default SignUp;

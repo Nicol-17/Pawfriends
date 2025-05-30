@@ -1,62 +1,63 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
+    --theme-color-primary: #334359;
+    --theme-color-neutral: #fffff0;
+    --theme-color-contrast: #9b5134;
+    --theme-color-contrast-dark: #fffff0;
+    --theme-color-contrast-light: #9b5134;
 
-  --theme-color-primary: #334359;
-  --theme-color-neutral: #fffff0;
-  --theme-color-contrast: #9b5134;
-  --theme-color-contrast-dark: #fffff0;
-  --theme-color-contrast-light: #9b5134;
+    --theme-font-chewy: "Chewy", system-ui;
+    --theme-font-quicksand: "Quicksand", sans-serif;
 
-  --theme-font-chewy: "Chewy", system-ui;
-  --theme-font-quicksand: "Quicksand", sans-serif;
+    --app-nav-height: 110px;
 }
 
-.chewy{
-  font-family: var(--theme-font-chewy);
+.chewy {
+    font-family: var(--theme-font-chewy);
 }
 
-.quicksand{
-  font-family: var(--theme-font-quicksand);
+.quicksand {
+    font-family: var(--theme-font-quicksand);
 }
 
 html {
-
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
-
 
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  min-height: 100dvh;
-  background-color: var(--theme-color-neutral);
-  color: var(--theme-color-primary);
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--theme-color-neutral);
+    color: var(--theme-color-primary);
+
+    > main {
+        overflow: hidden;
+    }
 }
 
-
 @media (prefers-color-scheme: dark) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
 }

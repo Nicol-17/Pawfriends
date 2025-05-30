@@ -1,8 +1,8 @@
-.Hojas{
-    width: 800px;
-    height: 300px;
-    margin-left: 300px;
-    padding-top: 0.2rem;
+.separator {
+    background-image: url(../../assets/Hojas.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100px;
+    
+    
 }
-
-

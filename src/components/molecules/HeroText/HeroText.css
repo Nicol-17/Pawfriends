@@ -1,68 +1,66 @@
-.text-primary {
-  color: var(--theme-color-primary); 
-  width: fit-content;
-  margin-block-start: 100px;
-  margin-inline-start: auto;
-}
-
-.text-principle {
-  display: grid;
-  text-align: left;
-  font-size: 2.5rem;
-
-  .owners {
-    display: flex;
-    column-gap: 2ch;
-    align-items: center;
-    margin-inline-start: 2ch;
-  }
-  .puppies {
-    font-size: 1.5rem;
-  }
-}
-
-.Rama-secondary{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  width: 140px;
-}
-
-.Shape {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 250px;
-  height: 250px;
-  color: var(--theme-color-contrast);
-
-  svg {
-    position: absolute;
-    left: 0;
-    width: 190%;
-  }
-}
-
-
 .hero-section {
-  position: relative;
-  padding-block-start: 120px; 
-  position: relative;
+    height: 100%;
+    display: grid;
+    place-content: center stretch;
+}
+
+.hero-main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.full-column {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+
+.text-primary {
+    color: var(--theme-color-primary);
+    width: fit-content;
+    margin-block-start: 100px;
+    margin-inline-start: auto;
 }
 
 .Dog {
-  position: absolute;
-  height: 40%;
-
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    
 }
 
-.paragraph-primary{
-  padding: 15px;
-  margin-inline-start: 19ch;
+.text-principle {
+    display: grid;
+    text-align: left;
+    font-size: 2.5rem;
+
+    .owners {
+        display: flex;
+        column-gap: 2ch;
+        align-items: center;
+        margin-inline-start: 2ch;
+    }
+    .puppies {
+        font-size: 1.5rem;
+    }
 }
 
-.paragraph-secondary{
-  padding: 5px;
-  margin-inline-start: 30ch;
+.Rama-secondary {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    z-index: 1;
+    width: 140px;
+    scale: -1 1;
+}
+
+
+
+.paragraph-primary {
+    padding: 15px;
+    margin-inline-start: 19ch;
+}
+
+.paragraph-secondary {
+    padding: 5px;
+    margin-inline-start: 30ch;
 }
