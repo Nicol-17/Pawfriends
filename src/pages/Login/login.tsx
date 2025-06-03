@@ -52,7 +52,7 @@ function login() {
         <NavItem>
             <LanguageSwitcher/>
             <Button type="link" destiny="/" className="Nav-links">
-            Go to Home
+            {t('buttonNav')}
             </Button>
         </NavItem>
         

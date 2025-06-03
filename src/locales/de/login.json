@@ -12,5 +12,6 @@
     },
      "button" : "EINLOGGEN",
     "forgotPassword" : "Sie haben noch kein Konto?",
-    "signup" : "Melden Sie sich an"
+    "signup" : "Melden Sie sich an",
+    "buttonNav" : "Gehe zur Startseite"
 }

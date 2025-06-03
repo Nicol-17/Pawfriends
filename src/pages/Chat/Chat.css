@@ -75,9 +75,9 @@
 }
 
 .chat {
-  width: 400px;
+  width: 600px;
   margin: 0 auto;
-  height: 500px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   border-radius: 12px;

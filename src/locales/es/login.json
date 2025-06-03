@@ -12,5 +12,6 @@
     },
      "button" : "ACCESO",
     "forgotPassword" : "¿Aún no tienes una cuenta?",
-    "signup" : "Inscribirse"
+    "signup" : "Inscribirse",
+    "buttonNav" : "Ir a casa"
 }

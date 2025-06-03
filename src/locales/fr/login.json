@@ -13,5 +13,6 @@
     },
      "button" : "SE CONNECTER",
     "forgotPassword" : "Vous n'avez pas encore de compte ?",
-    "signup" : "S'inscrire"
+    "signup" : "S'inscrire",
+    "buttonNav" : "Rentrer à la maison"
 }
