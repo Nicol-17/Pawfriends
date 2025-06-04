@@ -32,5 +32,10 @@
             "label": "contraseña",
             "placeholder": "Ingrese su contraseña"
         }
+    },
+     "alert" : {
+        "title": "Usuario registrado exitosamente",
+        "button": "DE ACUERDO",
+        "message": "Su cuenta ha sido creada exitosamente"
     }
 }

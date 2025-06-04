@@ -32,5 +32,10 @@
             "label": "password",
             "placeholder": "Enter your password"
         }
+    },
+    "alert" : {
+        "title": "User successfully registered",
+        "button": "OK",
+        "message": "Your account has been successfully created"
     }
 }

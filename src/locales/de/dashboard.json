@@ -34,6 +34,7 @@
         }
         
     },
-    "buttonForm" : "Haustier hinzufügen"
+    "buttonForm" : "Haustier hinzufügen",
+    "buttonNavDashboard" : "Ausloggen"
 
 }

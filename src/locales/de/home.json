@@ -31,15 +31,18 @@
         "title": "US-FUSSZEILE",
         "RoyalCanin": {
             "name": "Royal Canin Feline Hydrolysiert 3,5 kg",
-            "price": "€ 53,93"
+            "price": 53.93,
+            "priceMessage" : "{{price, currency}}"
         },
         "Proplan": {
             "name": "Proplan Kalorienreduziertes Futter für kleine Rassen, 3 kg",
-            "price": "€ 28,90"
+            "price": 28.90,
+            "priceMessage" : "{{price, currency}}"
         },
         "NutraNuggets": {
             "name": "Nutra Nuggets Maintenance für Katzen",
-            "price": "€ 33,39"
+            "price": 33.39,
+            "priceMessage" : "{{price, currency}}"
         }
         
     },

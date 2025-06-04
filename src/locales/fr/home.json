@@ -29,15 +29,18 @@
         "title": "NOURRITURE POUR ANIMAUX",
         "RoyalCanin": {
             "name": "Royal Canin Feline Hydrolysé 3,5 kg",
-            "price": "€ 53,93"
+            "price": 53.93,
+            "priceMessage" : "{{price, currency}}"
         },
         "Proplan": {
             "name": "Proplan Aliment hypocalorique pour petites",
-            "price": "€ 28,90"
+            "price": 28.90,
+            "priceMessage" : "{{price, currency}}"
         },  
         "NutraNuggets": {
             "name": "Nutra Nuggets Entretien pour chats",
-            "price": "€ 33,39"
+            "price": 33.39,
+            "priceMessage" : "{{price, currency}}"
         }
     },
     "contact": {

@@ -44,7 +44,8 @@ i18n
             login: translationLoginEN,
             signup: translationSignupEN,
             dashboard: translationDashboardEN,
-            chat: translationChatEN
+            chat: translationChatEN,
+
          },
          es: {
             home: translationES,
@@ -78,6 +79,24 @@ i18n
       fallbackLng: "en", // Si no encuentra el idioma, usa inglés
       interpolation: {
          escapeValue: false,
+         format: (value, format, lng, options) => {
+            if (format === "currency") {
+               const currency =
+                  options?.currency ||
+                  (lng === "es" ? "EUR" :
+                     lng === "fr" ? "EUR" :
+                        lng === "de" ? "EUR" :
+                           "USD");
+
+               return new Intl.NumberFormat(lng, {
+                  style: "currency",
+                  currency,
+               }).format(value);
+            }
+
+            return value;
+         }
+
       },
    });
 

@@ -15,6 +15,7 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     font-size: 1rem;
+
 }
 
 input,
@@ -27,13 +28,23 @@ textarea {
     transition: border-color 0.3s ease;
     width: 50%;
     align-self: center;
+    background-color: var(--theme-color-neutral);
+    border: 0.1rem solid black;
 
+}
+
+.form-input {
+    color: black;
+    background-color: var(--theme-color-neutral);
+    border: 0.1rem solid black;
 }
 
 textarea {
     border-radius: 15px;
     resize: vertical;
     min-height: 100px;
+    color: black;
+
 }
 
 input:focus,
@@ -68,11 +79,11 @@ textarea:focus {
     }
 }
 
-    .Form-container {
-        width: 100%;
-        padding: 0;
-    }
-    .contact-text h2 {
-        font-size: 1.5rem;
-    }
-   
+.Form-container {
+    width: 100%;
+    padding: 0;
+}
+
+.contact-text h2 {
+    font-size: 1.5rem;
+}

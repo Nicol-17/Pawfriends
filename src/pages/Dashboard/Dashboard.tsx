@@ -3,7 +3,7 @@ import BaseForm from "../../components/organisms/BaseForm/BaseForm";
 import Image from "../../components/atoms/Image/Image";
 import Person1 from "../../assets/Testimonial/person1.jpg";
 import Button from "../../components/atoms/Button/Button";
-import Logo from "../../assets/logo.png";
+import NavItem from "../../components/organisms/NavItem/NavItem";
 import RamaSecondary from "../../assets/Rama-secondary.png";
 import Rama from "../../assets/Rama.png";
 import "./Dashboard.css";
@@ -63,11 +63,17 @@ function Dashboard() {
 
   return (
     <section className="Dashboard-container">
-      <LanguageSwitcher />
-      <div className="logo">
-        <Image src={Logo} alt="Logo" className="logo" aria-hidden="true" />
-      </div>
+     
+      
+        <NavItem>
+            <LanguageSwitcher/>
+            <Button type="link" destiny="/" className="Nav-links">
+            {t('buttonNavDashboard')}
+            </Button>
+        </NavItem>
+      
         <Image src={Rama} alt="Rama" aria-hidden="true" className="rama" ></Image>
+       
 
       <div className="profile-container">
         <h2>{t('title')}</h2>
@@ -76,6 +82,7 @@ function Dashboard() {
         <Image src={Person1} alt="Person1" className="Person1" aria-hidden="true" />
         <Button type="link" destiny="#" className="Nav-links">{t('buttonEdit')}</Button>
         <Button type="link" destiny="/chat" className="Nav-links">{t('buttonChat')}</Button>
+        
         <Image src={RamaSecondary} alt="Rama" aria-hidden="true" className="Rama-secondary"></Image>
       </div>
 

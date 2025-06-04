@@ -32,5 +32,10 @@
             "label": "mot de passe",
             "placeholder": "Entrez votre mot de passe"
         }
+    },
+     "alert" : {
+        "title": "Utilisateur enregistré avec succès",
+        "button": "d'après",
+        "message": "Votre compte a été créé avec succès"
     }
 }

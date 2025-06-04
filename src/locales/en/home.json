@@ -29,15 +29,18 @@
         "title": "PET FOOD",
         "RoyalCanin": {
             "name": "Royal Canin Feline Hydrolyzed 3.5 kg",
-            "price": "$ 60.67"
+            "price": 60.67,
+            "priceMessage" : "{{price, currency}}"
         },
         "Proplan": {
             "name": "Proplan Low-calorie food for small breeds, 3 kg",
-            "price": "$ 32.52"
+            "price": 32.52,
+            "priceMessage" : "{{price, currency}}"
         },
         "NutraNuggets": {
             "name": "Nutra Nuggets Maintenance for Cats",
-            "price": "$ 37.57"
+            "price": 37.57,
+            "priceMessage" : "{{price, currency}}"
         }
        
     },

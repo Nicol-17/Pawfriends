@@ -34,6 +34,7 @@
         }
         
     },
-    "buttonForm" : "Añadir mascota"
+    "buttonForm" : "Añadir mascota",
+    "buttonNavDashboard" : "Cerrar sesión"
 
 }

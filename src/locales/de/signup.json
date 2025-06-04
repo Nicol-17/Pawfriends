@@ -32,5 +32,10 @@
             "label": "Passwort",
             "placeholder": "Geben Sie Ihr Passwort ein"
         }
+    },
+    "alert" : {
+        "title": "Benutzer erfolgreich registriert",
+        "button": "OK",
+        "message": "Ihr Konto wurde erfolgreich erstellt"
     }
 }

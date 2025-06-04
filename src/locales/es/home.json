@@ -29,15 +29,18 @@
         "title": "ALIMENTOS PARA MASCOTAS",
         "RoyalCanin": {
             "name": "Royal Canin Feline Hidrolizado 3,5 kg",
-            "price": "$250.263 COP"
+            "price": 250.263,
+            "priceMessage" : "{{price, currency}}"
         },
         "Proplan": {
             "name": "Proplan Alimento bajo en calorías para razas pequeñas, 3 kg",
-            "price": "$134.119 COP"
+            "price": 134.119,
+            "priceMessage" : "{{price, currency}}"
         },
         "NutraNuggets": {
             "name": "Nutra Nuggets Mantenimiento para Gatos",
-            "price": "$154.975 COP"
+            "price": 154.975,
+            "priceMessage" : "{{price, currency}}"
         }
     },
     "contact": {

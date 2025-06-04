@@ -7,27 +7,31 @@ import { useTranslation } from "react-i18next";
 function FooderSection() {
   const { t } = useTranslation(["home"]);
 
+  const royalCaninePrice = t("food.RoyalCanin.priceMessage",{
+    price: t("food.RoyalCanin.price"),
+  });
+
   return (
     <section className="fooder-container">
         <h2>{t('food.title')}</h2>
         <div className="fooder-cards-container">
           <TestimonialCard
             name={t('food.RoyalCanin.name')}
-            comment={t('food.RoyalCanin.price')}
+            comment={royalCaninePrice}
             avatar={RoyalCanine}
             rating={4}
            
           />
           <TestimonialCard
             name={t('food.Proplan.name')}
-            comment={t('food.Proplan.price')}
+            comment={royalCaninePrice}
             avatar={ProPlan}
             rating={3}
 
           />
           <TestimonialCard
             name={t('food.NutraNuggets.name')}
-            comment={t('food.NutraNuggets.price')}
+            comment={royalCaninePrice}
             avatar={NutraNuggets}
             rating={4}
 

@@ -7,8 +7,18 @@ import NavItem from "../../components/organisms/NavItem/NavItem";
 import Button from "../../components/atoms/Button/Button";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../../components/atoms/LanguageSwitcher/LanguageSwitcher";
+import { signup } from "../../Services/auth";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2'
+
+
+
 function SignUp() {
-  const { t } = useTranslation(["signup"])
+  const { t } = useTranslation(["signup"]);
+  const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setsuccessMessage] = useState("");
 
   const fields: Field[] = [
     {
@@ -57,9 +67,30 @@ function SignUp() {
     },
   ];
 
-  const handleSignUpSubmit = (formData: Record<string, string>) => {
-    console.log("Form submitted:", formData);
+
+  const handleSignUpSubmit = async (FormData: Record<string, string>) => {
+    try {
+      const data = await signup(FormData);
+      setsuccessMessage(data.message || "user created successfully");
+      setErrorMessage("");
+
+      Swal.fire({
+        title: t("alert.title"),
+        text: t("alert.message"),
+        icon: "success",
+        confirmButtonText: t("alert.button") || "OK",
+        draggable: true
+      });
+
+      setTimeout(() => {
+        navigate("/login");
+      }, 2600);
+
+    } catch (error: any) {
+      setErrorMessage(error.message);
+    };
   }
+
   return (
 
     <>
@@ -77,6 +108,10 @@ function SignUp() {
 
         <div className="Form-container">
           <h3>{t('title')}</h3>
+
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+          {successMessage && <p className="success-message">{successMessage}</p>}
+
           <BaseForm fields={fields} onSubmit={handleSignUpSubmit} buttonText={t('buttonForm')} className="style-login" />
 
 
