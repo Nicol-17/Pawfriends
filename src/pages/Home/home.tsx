@@ -55,7 +55,7 @@ const Home = () => {
       <div className="header-top-spacing">
         <div className="separator"></div>
       </div>
-      
+
       <section id="us" className="section section-haft header-top-spacing">
         <div className="header-top-spacing main-wrapper">
           <UsText />
@@ -79,7 +79,7 @@ const Home = () => {
       <div className="header-top-spacing">
         <div className="separator"></div>
       </div>
-      
+
 
       <section
       id="food"
@@ -102,4 +102,4 @@ const Home = () => {
 
 }
 
-export default Home; 
+export default Home;
