@@ -1,22 +1,20 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loginUser } from "../../Services/auth";
-import BaseForm from "../../components/organisms/BaseForm/BaseForm";
-import type { Field } from "../../components/organisms/BaseForm/BaseForm";
+import { useTranslation } from "react-i18next";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { loginUser } from "../../Services/auth";
+import BaseForm from "../../components/organisms/BaseForm/BaseForm";
+import type { Field } from "../../components/organisms/BaseForm/BaseForm";
 import NavItem from "../../components/organisms/NavItem/NavItem";
 import Button from "../../components/atoms/Button/Button";
 import Image from "../../components/atoms/Image/Image";
 import RamaSecondary from "../../assets/Rama-secondary.png";    
 import "./Login.css";
-import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../../components/atoms/LanguageSwitcher/LanguageSwitcher";
 
-
-
-function login() {
+function Login() {
     const { t } = useTranslation(["login"]);
     const navigate = useNavigate();
     const [errorMessage, setErrorMessage] = useState("");
@@ -41,6 +39,7 @@ function login() {
             console.log("Login successful:", data);
             navigate("/dashboard");
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             setErrorMessage(error.message);
         };
@@ -67,8 +66,8 @@ function login() {
                 <BaseForm fields={fields} onSubmit={
                     handleLoginSubmit} buttonText={t('button')} className="style-login" />
                 <div className="login-icons">
-                    <a href="#"><FaGoogle /> Google</a>
-                    <a href="#"><FaFacebook /> Facebook</a>
+                    <a href="#" title='Google'><FaGoogle /> </a>
+                    <a href="#" title='Facebook'><FaFacebook /></a>
                 </div>
                 <div className="login-footer">
                     <p>{t('forgotPassword')}<Link to="/signup" aria-label="Sign up for a new account">{t('signup')}</Link></p>
@@ -86,4 +85,4 @@ function login() {
 }
 
 
-export default login; 
+export default Login; 

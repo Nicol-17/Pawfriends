@@ -17,8 +17,11 @@
 
 .fooder-cards-container{
     display: flex;
-    gap: 5rem;
+    flex-wrap: wrap;
+    gap: min(1rem, 2rem, 5rem);
+
     justify-Content: space-evenly;
-    
-    
+    > div {
+        flex: 1 1 auto;
+    }
 }

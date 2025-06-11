@@ -94,7 +94,7 @@ const Home = () => {
         <div className="separator"></div>
       </div>
 
-      <section id="contact" className="contact header-top-spacing">
+      <section id="contact" className="contact header-top-spacing main-wrapper">
         <ContactSection />
       </section>
     </>

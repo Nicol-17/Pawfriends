@@ -14,21 +14,20 @@
 }
 
 .Testimonial-cards-container{
-    display: flex;
-    gap: 5rem;
+    display: grid;
+    gap: min(1rem, 2rem, 5rem);
     justify-Content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .Testimonial-container {
         padding: 2rem;
-        flex-direction: column;
         text-align: center;
         padding: 0 20px;
-        display: grid;
-    }
 
-    .Testimonial-container h2 {
-        font-size: 2rem;
+        h2 {
+            font-size: 2rem;
+        }
     }
 }

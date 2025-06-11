@@ -90,6 +90,24 @@
   z-index: 2;
   margin-top: 5rem;
 
+  input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    color: black;
+  }
+  
+  button {
+    margin-left: 10px;
+    border: none;
+    background: #4f9ec4;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
 }
 
 .messages {
@@ -122,22 +140,4 @@
   display: flex;
   padding: 10px;
   background: rgba(255, 255, 255, 0.2);
-}
-
-input {
-  flex: 1;
-  padding: 0.5rem;
-  border-radius: 10px;
-  border: none;
-  color: black;
-}
-
-button {
-  margin-left: 10px;
-  border: none;
-  background: #4f9ec4;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  cursor: pointer;
 }
