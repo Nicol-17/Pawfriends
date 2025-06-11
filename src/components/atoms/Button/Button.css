@@ -9,8 +9,12 @@
     padding: 10px 20px;
     background-color: var( --theme-color-primary);
     color: var( --theme-color-neutral);
-    margin-inline-start: 10ch;
-    margin-top: 10px;
+    /* margin-inline-start: 10ch; */
+    /* margin-top: 10px; */
+
+    &:is(a) {
+        font-size: min(.9rem, 2vw, 1.1rem);;
+    }
 }
 
 .custom-button:hover{

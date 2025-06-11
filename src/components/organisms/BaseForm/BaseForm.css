@@ -3,6 +3,8 @@
     flex-direction: column;
     gap: 1rem;
     padding: 2rem;
+    max-width: 420px;
+    margin-inline: auto;
 }
 
 .form-group {
@@ -26,7 +28,7 @@ textarea {
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s ease;
-    width: 50%;
+    width: 100%;
     align-self: center;
     background-color: var(--theme-color-neutral);
     border: 0.1rem solid black;
@@ -68,7 +70,7 @@ textarea:focus {
     margin-left: 0.1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .base-form {
         padding: 0.2rem;
     }

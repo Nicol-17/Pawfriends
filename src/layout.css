@@ -1,5 +1,5 @@
 .main-wrapper {
-    width: min(calc(100% - 1rem), max(1024px));
+    width: min(calc(100% - .7rem), max(1024px));
     margin-inline: auto;
 }
 

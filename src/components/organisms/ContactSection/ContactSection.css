@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 10rem;
+  padding: 1rem;
   gap: 2rem;
 
   
@@ -51,13 +51,16 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .Contact-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .Contact-img,
+  .Contact-img {
+    width: min(100%, 300px);
+  }
+
   .contact-text {
     width: 100%;
   }

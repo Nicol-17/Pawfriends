@@ -42,7 +42,7 @@ function HeroText() {
 
             <p className="paragraph-secondary"> {t('hero.paragraph2')}</p>
 
-            <Button type="link" destiny="/signup" className="Nav-links">
+            <Button type="link" destiny="/signup" className="Nav-links hero-button">
               {t('hero.signup')}
             </Button>
           </div>
